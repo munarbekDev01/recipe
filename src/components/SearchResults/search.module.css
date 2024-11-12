@@ -1,6 +1,5 @@
 .results {
   display: flex;
-  gap: clamp(20px, 4vw, 30px);
   flex-wrap: wrap;
 }
 

@@ -60,7 +60,7 @@ const RecipeCard = ({ el }) => {
 
   return (
     <div className={style.card}>
-      <img className={style.img} src={el.url} alt={el.title} />
+      <img onClick={() => nav(`/details/${el.id}`)} className={style.img} src={el.url} alt={el.title} />
       <div className={style.star}>
         <div className={style.delAndStars}>
           <div

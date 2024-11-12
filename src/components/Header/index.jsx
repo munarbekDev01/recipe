@@ -13,17 +13,20 @@ const Header = () => {
   const [value, setValue] = useState("");
   const [modal, setModal] = useState(false);
   console.log(value);
-  if (value !== "") {
-    function handleSearch(params) {
+  function handleSearch() {
+    if (value === trim()) {
+    } else {
       nav(`/search/${value}`);
+      setValue("");
     }
-
-    const handleKeyDown = (event) => {
-      if (event === "Enter") {
-        handleSearch();
-      }
-    };
   }
+
+  const handleKeyDown = (event) => {
+    if (event === "Enter") {
+      handleSearch();
+      setValue("");
+    }
+  };
   return (
     <header className="">
       <div className="container">
@@ -37,9 +40,9 @@ const Header = () => {
               </h2>
               {modal ? (
                 <div className={style.modal}>
-                  <Link to={"/favorites"} >Любимые</Link>
-                  <Link to={"/"} > На главную</Link>
-                  <Link to={"/allRecipe"} >Список рецептов </Link>
+                  <a href="/favorites">Любимые</a>
+                  <a href="/"> На главную</a>
+                  <a href="/allRecipe">Список рецептов </a>
                 </div>
               ) : null}
             </div>

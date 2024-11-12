@@ -56,15 +56,15 @@ header {
   background-color: white;
 }
 .modal {
+  position: absolute; /* или fixed в зависимости от макета */
+  z-index: 1000; /* или больше, если нужно */
   backdrop-filter: blur(3px);
   border-radius: 10px;
   padding: 10px;
   background-color: #4a9eeca3;
-  position: absolute;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  z-index: 2;
   color: #725AC1;
 }
 .modal a:hover {

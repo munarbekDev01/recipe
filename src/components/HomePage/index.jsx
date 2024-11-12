@@ -36,13 +36,15 @@ const HomePage = () => {
     <div className={style.home}>
       <div className="container">
         <div className={style.theBest}>
+          <div className={style.tes}>
+
           <h1>Лучшие деликатесы</h1>
           <p
             onClick={() => setBestAll(!bestAll)}
-            className={style.vieYet}
           >
             {bestAll ? "Свернуть" : "Показать еще"}
           </p>
+          </div>
           <div className={style.blocks}>
             {database &&
               database
@@ -55,13 +57,15 @@ const HomePage = () => {
         </div>
 
         <div className={style.Sweets}>
+          <div className={style.tes}>
+
           <h1>Сладости</h1>
           <p
             onClick={() => setSweet(!sweet)}
-            className={style.vieYet}
           >
             {sweet ? "Свернуть" : "Показать еще"}
           </p>
+          </div>
           <div className={style.blocks}>
             {database &&
               filterSweets(database) // Фильтруем сладкие рецепты

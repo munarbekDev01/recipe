@@ -43,15 +43,29 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className={style.footerBottom}>
-            <p>© 2023 Вкусняшка - все права защищены</p>
+          <div >
+            <div className={style.footerBottom}>
+
+            <div className={style.year}>
+
+            <p>© 2023 Tastebite - все права защищены</p>
+            </div>
 
             <p className={style.icons}>
-              <FaFacebook className={style.icon} />
-              <FaInstagram className={style.icon} />
-              <CiTwitter className={style.icon} />
-              <FaYoutube className={style.icon} />
+              <span>
+                <FaFacebook />{" "}
+              </span>
+              <span>
+                <FaInstagram />{" "}
+              </span>
+              <span>
+                <CiTwitter />{" "}
+              </span>
+              <span>
+                <FaYoutube />{" "}
+              </span>
             </p>
+            </div>
           </div>
         </div>
       </div>

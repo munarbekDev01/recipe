@@ -1,57 +1,64 @@
 import React from "react";
 import style from "./header.module.css";
 import img from "../../assets/4047768.png";
-import { MdFavoriteBorder } from "react-icons/md";
 import { MdOutlineFavorite } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosCreate } from "react-icons/io";
 import { useState } from "react";
+import logo from "../../assets/logo.png";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => {
   const nav = useNavigate();
   const [value, setValue] = useState("");
-  const [key, setKey] = useState("");
+  const [modal, setModal] = useState(false);
   console.log(value);
-  function handleSearch(params) {
-
-    nav(`/search/${value}`);
-  }
+  if (value !== "") {
+    function handleSearch(params) {
+      nav(`/search/${value}`);
+    }
 
     const handleKeyDown = (event) => {
-        
-        if (event === "Enter") {
-            handleSearch();
-        }
-      };
+      if (event === "Enter") {
+        handleSearch();
+      }
+    };
+  }
   return (
     <header className="">
       <div className="container">
         <div className={style.header}>
           <div onClick={() => nav("/")} className={style.hea}>
             <img width={50} src={img} alt="" />
-            <h1>Кулинария</h1>
+            <img className={style.logo} src={logo} alt="" />
+            <div className={style.burger}>
+              <h2 onClick={() => (modal ? setModal(false) : setModal(true))}>
+                <RxHamburgerMenu />
+              </h2>
+              {modal ? (
+                <div className={style.modal}>
+                  <Link to={"/favorites"} >Любимые</Link>
+                  <Link to={"/"} > На главную</Link>
+                  <Link to={"/allRecipt"} >Список рецептов </Link>
+                </div>
+              ) : null}
+            </div>
+          </div>
+          <div className={style.navs}>
+            <Link to={"/favorites"}>Любимые</Link>
+            <Link to={"/"}>На главную</Link>
+            <Link to={"/allRecipt"}>Список рецептов</Link>
           </div>
           <div className={style.der}>
             <div className={style.inp}>
               <input
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
-                className={style.input}
                 type="text"
-                placeholder="исать по ингредиентам"
+                placeholder="Искать по ингредиентам"
                 onKeyDown={(e) => handleKeyDown(e.key)}
               />
-              <button onClick={() => handleSearch()} className={style.button}>
-                искать
-              </button>
-            </div>
-            <div className={style.navs}>
-              <Link className={style.a} to={"/favorites"}>
-                <MdOutlineFavorite />
-              </Link>
-              <Link className={style.cre} to={"/creator"}>
-                <IoIosCreate />
-              </Link>
+              <button onClick={() => handleSearch()}>искать</button>
             </div>
           </div>
         </div>

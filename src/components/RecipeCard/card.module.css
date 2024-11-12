@@ -1,0 +1,58 @@
+.card {
+  margin: 30px 0;
+}
+
+.star {
+  font-size: 20px;
+  width: auto;
+  height: auto;
+}
+.img {
+  width: 300px;
+  height: 200px;
+  /* height: auto; */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.title {
+  width: 300px;
+}
+.img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.img:active {
+  cursor: auto;
+}
+
+.img:hover {
+  transform: scale(1.05);
+}
+
+span {
+  cursor: pointer;
+}
+.span {
+    
+  margin-right: 10px;
+  font-size: 20px;
+  color: gold;
+  transition: 0.3s ease;
+  font-size: 20px;
+}
+.delFav {
+    border-radius: 10px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 10px;
+    background: orange;
+    border: 0;
+}
+.delAndStars {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    
+}

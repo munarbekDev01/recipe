@@ -1,0 +1,63 @@
+header {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(132, 130, 130, 0.525);
+  margin-bottom: 60px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.a {
+  color: rgb(255, 0, 0);
+  font-size: 30px;
+}
+.der {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.inp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.input {
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 15px;
+}
+.button {
+  border: none;
+  font-size: 18px;
+  outline: none;
+  background: rgb(255, 166, 0);
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+.button:hover {
+  transform: scale(1.1);
+}
+.button:active {
+  transform: scale(1);
+}
+
+.hea {
+  display: flex;
+  align-items: center;
+}
+.navs {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.cre {
+  color: orange;
+  font-size: 30px;
+}

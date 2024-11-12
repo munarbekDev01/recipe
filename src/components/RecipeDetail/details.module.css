@@ -1,0 +1,21 @@
+.content {
+    border-radius: 10px;
+    background-color: #e3f1ff;
+    display: flex;
+    gap: 5%;
+    
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.img {
+    width: 60%;
+    border-radius: 10px;
+
+}
+.title {
+    font-size: 50px;    
+}

@@ -1,0 +1,26 @@
+.home {
+}
+.blocks {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.theBest {
+  display: flex;
+  flex-direction: column;
+}
+.vieYet {
+  text-align: right;
+  cursor: pointer;
+  font-weight: 900;
+  height: 30px;
+  transition: 0.8s;
+}
+/* .vieYet:hover {
+  font-size: 20px;
+} */
+
+/* // const isSweet = el.incredients.some(
+    //   (ingredient) =>
+    //     ingredient.toLowerCase().includes("сахар") || ingredient.toLowerCase().includes("сливки")
+    // ); */

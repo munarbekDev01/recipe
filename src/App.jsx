@@ -6,6 +6,7 @@ import SearchResults from "./components/SearchResults";
 import Favorites from "./components/Favorites";
 import Footer from "./components/Footer";
 import RecipeDetail from "./components/RecipeDetail";
+import RecipeList from "./components/RecipeList";
 
 const App = () => {
   const routes = [
@@ -28,6 +29,11 @@ const App = () => {
       id: 3,
       path: "/details/:id",
       component: <RecipeDetail />,
+    },
+    {
+      id: 4,
+      path: "/allRecipe",
+      component: <RecipeList />,
     },
   ];
   return (

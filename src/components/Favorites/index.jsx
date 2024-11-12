@@ -11,6 +11,7 @@ const Favorites = () => {
   return (
     <div className="hame">
       <div className="container">
+        <h1>Любимые</h1>
         <div className={style.blocks}>
 
         {all && all.map((el) => <RecipeCard el={el} key={el.id} />)}

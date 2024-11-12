@@ -39,15 +39,15 @@ const Header = () => {
                 <div className={style.modal}>
                   <Link to={"/favorites"} >Любимые</Link>
                   <Link to={"/"} > На главную</Link>
-                  <Link to={"/allRecipt"} >Список рецептов </Link>
+                  <Link to={"/allRecipe"} >Список рецептов </Link>
                 </div>
               ) : null}
             </div>
           </div>
           <div className={style.navs}>
-            <Link to={"/favorites"}>Любимые</Link>
             <Link to={"/"}>На главную</Link>
-            <Link to={"/allRecipt"}>Список рецептов</Link>
+            <Link to={"/allRecipe"}>Список рецептов</Link>
+            <Link to={"/favorites"}>Любимые</Link>
           </div>
           <div className={style.der}>
             <div className={style.inp}>

@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const RecipeCard = ({ el }) => {
   const location = useLocation();
   console.log(location.pathname);
-  const nav = useNavigate()
+  const nav = useNavigate();
   const [isFavorite, setIsFavorite] = useState(false);
 
   const getFavorites = () => {
@@ -63,10 +63,17 @@ const RecipeCard = ({ el }) => {
       <img className={style.img} src={el.url} alt={el.title} />
       <div className={style.star}>
         <div className={style.delAndStars}>
-          {getStars(el.rating)}
-          <span className={style.span} onClick={toggleFavorite}>
+          <div
+            style={{
+              display: "flex",
+              gap: "5px",
+            }}
+          >
+            {getStars(el.rating)}
+          </div>
+          <span onClick={toggleFavorite}>
             {location.pathname === "/favorites" ? (
-              <button className={style.delFav}>Удалить из избранного</button>
+              <button>Удалить</button>
             ) : isFavorite ? (
               <MdFavorite />
             ) : (
@@ -74,7 +81,7 @@ const RecipeCard = ({ el }) => {
             )}
           </span>
         </div>
-        <h3 className={style.title} onClick={() => nav(`/details/${el.id}`)}>{el.title}</h3>
+        <h3 onClick={() => nav(`/details/${el.id}`)}>{el.title}</h3>
       </div>
     </div>
   );

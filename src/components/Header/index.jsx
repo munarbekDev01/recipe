@@ -14,12 +14,9 @@ const Header = () => {
   const [modal, setModal] = useState(false);
   console.log(value);
   function handleSearch() {
-    if (value === trim()) {
-    } else {
       nav(`/search/${value}`);
       setValue("");
     }
-  }
 
   const handleKeyDown = (event) => {
     if (event === "Enter") {
